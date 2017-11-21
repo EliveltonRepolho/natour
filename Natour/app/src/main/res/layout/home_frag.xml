@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="com.repolho.natour.home.HomeFragment" />
+
+        <variable
+            name="viewmodel"
+            type="com.repolho.natour.home.HomeViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/pointsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tasksLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="@{viewmodel.isFirst ? View.GONE : View.VISIBLE}">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/noPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="@{viewmodel.isFirst ? View.VISIBLE : View.GONE}">
+
+
+            <ImageView
+                android:id="@+id/noPointsIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_assignment_turned_in_24dp" />
+
+            <TextView
+                android:id="@+id/noPointsMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/list_item_padding"
+                android:text="@string/no_points_all" />
+
+            <TextView
+                android:id="@+id/noPointsAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@drawable/touch_feedback"
+                android:gravity="center"
+                android:onClick="@{() -> viewmodel.addNewPoint()}"
+                android:text="@string/no_points_add" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

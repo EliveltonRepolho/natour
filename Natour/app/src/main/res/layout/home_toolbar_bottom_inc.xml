@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/toolbarMainBottom"
+android:layout_width="match_parent"
+android:layout_height="?attr/actionBarSize"
+app:theme="@style/ToolbarMainBottomStyle">
+
+    <LinearLayout
+        android:id="@+id/toolbarmenucontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="6"
+        android:orientation="horizontal" >
+        <ImageButton
+            android:id="@+id/toolbarButtonHome"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:theme="@style/ToolbarMainBottomButtonStyle"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_fish_catch_bevel"/>
+        <Button
+            android:id="@+id/toolbarButtonNewCatch"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Catch"
+            style="?android:attr/borderlessButtonStyle"
+            android:theme="@style/ToolbarMainBottomButtonStyle"
+            android:drawableTop="@drawable/ic_new_catch_black"/>
+        <ImageButton
+            android:id="@+id/toolbarButtonMap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"
+            android:theme="@style/ToolbarMainBottomButtonStyle"
+            android:src="@drawable/ic_places_catches_black"/>
+        <ImageButton
+            android:id="@+id/toolbarButtonUser"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_user_black"
+            style="?android:attr/borderlessButtonStyle"
+            android:theme="@style/ToolbarMainBottomButtonStyle" />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

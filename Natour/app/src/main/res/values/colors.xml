@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#159934</color>
+    <color name="colorPrimaryDark">#ff0f9d58</color>
+    <color name="colorAccent">#ff0099cc</color>
+
+    <color name="colocDarkGrey">#151212</color>
+    <color name="colorGrey">#ECECEC</color>
+    <color name="colorRed">#E93D43</color>
+    <color name="colorGreen">#159934</color>
+    <color name="colorOrange">#F9BA2B</color>
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_900">#212121</color>
+    <color name="black">#000000</color>
+
+    <color name="Teal_700">#ff00796b</color>
+    <color name="Teal_800">#ff00695c</color>
+    <color name="Blue_700">#ff3367d6</color>
+    <color name="Blue_800">#ff2a56c6</color>
+    <color name="Indigo_700">#ff303f9f</color>
+    <color name="Indigo_800">#ff283593</color>
+    <color name="Purple_700">#ff7b1fa2</color>
+    <color name="Purple_800">#ff6a1b9a</color>
+    <color name="Pink_700">#ffc2185b</color>
+    <color name="Pink_800">#ffad1457</color>
+    <color name="Red_700">#ffc53929</color>
+    <color name="Red_800">#ffb93221</color>
+
+    <color name="material_grey_900">#ff212121</color>
+    <color name="material_grey_850">#ff303030</color>
+    <color name="material_grey_800">#ff424242</color>
+    <color name="material_grey_600">#ff757575</color>
+    <color name="material_grey_300">#ffe0e0e0</color>
+    <color name="material_grey_100">#fff5f5f5</color>
+    <color name="material_grey_50">#fffafafa</color>
+    <color name="material_deep_teal_100">#ffb2dfdb</color>
+    <color name="material_deep_teal_200">#ff80cbc4</color>
+    <color name="material_deep_teal_300">#ff4db6ac</color>
+    <color name="material_deep_teal_500">#ff009688</color>
+    <color name="material_blue_grey_800">#ff37474f</color>
+    <color name="material_blue_grey_900">#ff263238</color>
+    <color name="material_blue_grey_950">#ff21272b</color>
+
+    <drawable name="touchFeedback">#CFD8DC</drawable>
+</resources>

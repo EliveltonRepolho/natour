@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.repolho.natour.newpoint.NewPointViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/editTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title_hint"
+                    android:inputType="text"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:text="@={viewmodel.title}"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/editFishKindLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editFishKind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Details"
+                    android:inputType="text"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:text="@={viewmodel.detail}"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

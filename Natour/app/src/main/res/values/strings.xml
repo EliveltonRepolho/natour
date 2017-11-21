@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Na.tour</string>
+
+    <string name="font_fontFamily_medium">sans-serif</string>
+
+    <!-- Google API key-->
+    <string name="google_maps_key">AIzaSyDndcg512hf24IzcIF1Momzj_MaybdGeKQ</string>
+    <string name="firabase_storage_bucket">natour-4a298.appspot.com</string>
+
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+    <string name="no_points_all">No poits added</string>
+    <string name="no_points_add">Be the first</string>
+
+    <string name="error_upload_task_create">Couldn\'t create upload task.</string>
+    <string name="default_progress_message">Please wait...</string>
+    <string name="profile_progress_message">Signing in...</string>
+    <string name="post_upload_progress_message">Uploading...</string>
+    <string name="user_logged_out_error">You must be logged in to do that.</string>
+    <string name="error_user_not_signed_in">Error user not signed in.</string>
+    <string name="title_hint">Dê um nome para este local</string>
+</resources>

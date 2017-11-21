@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ToolbarMainBottomStyle" parent="android:Widget.Material.Toolbar.Button.Navigation">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/grey_300</item>
+    </style>
+
+    <style name="ToolbarMainBottomButtonStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">8sp</item>
+        <item name="android:elevation">2sp</item>
+    </style>
+</resources>

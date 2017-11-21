@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="ToolbarMainTopTextStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="ToolbarMainBottomStyle" parent="AppTheme">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/grey_300</item>
+    </style>
+
+    <style name="ToolbarMainBottomButtonStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="ThemeOverlay.FishIcon" parent="AppTheme">
+        <item name="android:layout_marginTop">@dimen/icon_top_margin</item>
+        <item name="android:layout_marginBottom">@dimen/icon_bottom_margin</item>
+    </style>
+</resources>

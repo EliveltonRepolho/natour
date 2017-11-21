@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.repolho.natour.user.UserViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_user_photo"
+            android:layout_width="@dimen/profile_user_photo_size"
+            android:layout_height="@dimen/profile_user_photo_size"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+
+        <TextView
+            android:id="@+id/user_display_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_user_photo"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text="@{viewmodel.userNameLabel}"/>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/user_display_name"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:background="@color/grey_800" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/v_line1"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:background="@android:color/transparent"
+            android:gravity="left|center_vertical"
+            android:paddingStart="10dp"
+            android:text="Sair / Logout"
+            android:textStyle="bold"
+            android:onClick="@{() -> viewmodel.logoutClicked()}"/>
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/grey_300" />
+
+    </RelativeLayout>
+</layout>

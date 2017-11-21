@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="com.repolho.natour.newpoint.NewPointActivity" />
+
+        <variable
+            name="viewmodel"
+            type="com.repolho.natour.newpoint.NewPointViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+        <include
+            android:id="@+id/toolbarMainTop"
+            layout="@layout/new_point_toolbar_top_inc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerNewCatch"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/viewPagerTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|fill_horizontal" />
+
+        </android.support.v4.view.ViewPager>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/grey_300">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                tools:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<android.support.design.widget.TextInputLayout
+                        android:id="@+id/editDescCoordenateLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/editDescCoordenate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:enabled="false"
+                            android:hint="Endereço"
+                            android:inputType="text"
+                            android:text="@{viewmodel.coordenatesDesc}" />
+                    </android.support.design.widget.TextInputLayout>-->
+                    <TextView
+                        android:id="@+id/txtDescCoordenate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:text="@{viewmodel.coordenatesDesc}" />
+
+                    <ImageButton
+                        android:id="@+id/btnEnableEditDescCoordenate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_edit_location_black" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

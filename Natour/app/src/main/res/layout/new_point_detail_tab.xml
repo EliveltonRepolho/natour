@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tabNewCatchDetail">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tabNewCatch"
+        android:textSize="@dimen/tab_label"
+        android:gravity="center_vertical"
+        android:text="Detalhe"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@string/font_fontFamily_medium"/>
+    <ImageButton
+        android:id="@+id/tabNewCatchDetailIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/separator"
+        android:background="@null"
+        android:clickable="false"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_detail_black"/>
+
+    <View android:id="@+id/separator"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="4dp"
+        android:layout_width = "3dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tabNewCatchDetailIcon"
+        android:layout_alignBottom="@+id/tabNewCatchDetailIcon"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
+
