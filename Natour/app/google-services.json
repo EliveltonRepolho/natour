@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "96808188900",
+    "firebase_url": "https://natour-4a298.firebaseio.com",
+    "project_id": "natour-4a298",
+    "storage_bucket": "natour-4a298.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96808188900:android:c28d37b6e974b26b",
+        "android_client_info": {
+          "package_name": "com.repolho.natour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96808188900-902kj48i5menjd3bvif3eifnj0udjj3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.repolho.natour",
+            "certificate_hash": "d372b428a11e668c4004f2e52ff99f5353298c93"
+          }
+        },
+        {
+          "client_id": "96808188900-0r8lbs9094oi2vufkicdfcfesk5giije.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSqYjcsNPIqWbRVQG7q4M3r1QyOkTTiK8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96808188900-0r8lbs9094oi2vufkicdfcfesk5giije.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
