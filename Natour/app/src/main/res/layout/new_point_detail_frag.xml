@@ -35,23 +35,110 @@
                     android:text="@={viewmodel.title}"/>
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/editFishKindLayout"
+            <!-- dangerousness -->
+            <TextView
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp">
+                android:text="@string/text_dangerousness_no_selection"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="10dp"/>
+            <SeekBar
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="3"
+                android:progress="0"
+                android:onProgressChanged="@{viewmodel.onDangerousnessInfoChanged}"/>
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@{viewmodel.dangerousnessRes}"/>
+            <TextView
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.dangerousnessText}"/>
+            <!-- / dangerousness -->
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/editFishKind"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Details"
-                    android:inputType="text"
-                    android:minLines="1"
-                    android:scrollbars="vertical"
-                    android:text="@={viewmodel.detail}"/>
-            </android.support.design.widget.TextInputLayout>
+            <!-- wheelchair difficulty -->
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_access_difficulty_no_selection"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="10dp"/>
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="3"
+                android:progress="0"
+                android:onProgressChanged="@{viewmodel.onAccessDifficultyInfoChanged}"/>
+            <ImageView
+                android:id="@+id/image"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@{viewmodel.accessDifficultyRes}"/>
+            <TextView
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.accessDifficultyText}"/>
+            <!-- / access difficulty -->
 
+
+            <!-- wheelchair difficulty -->
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_wheelchair_difficulty_no_selection"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="10dp"/>
+            <SeekBar
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="3"
+                android:progress="0"
+                android:onProgressChanged="@{viewmodel.onWeelchairInfoChanged}"/>
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@{viewmodel.wheelchairDifficultyRes}"/>
+            <TextView
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.wheelchairDifficultyText}"/>
+            <!-- / wheelchair difficulty -->
+
+            <!-- wheelchair difficulty -->
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_time_walking"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time"
+                android:text="@={viewmodel.walkingAverage}"/>
+            <!-- / wheelchair difficulty -->
         </LinearLayout>
+
+
     </ScrollView>
 </layout>

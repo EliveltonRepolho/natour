@@ -31,4 +31,22 @@
     <string name="label_item_home_no_author">Anônimo</string>
     <string name="label_home_button_new">Nova cachoeira</string>
     <string name="label_login_button">Login</string>
+
+
+    <string name="text_wheelchair_difficulty_no_selection">Dificuldade para um cadeirante acessar</string>
+    <string name="text_wheelchair_difficulty_no_access">Sem acesso</string>
+    <string name="text_wheelchair_difficulty_with_help">Com ajuda</string>
+    <string name="text_wheelchair_difficulty_good">Acessível</string>
+
+    <string name="text_access_difficulty_no_selection">Dificuldade de acesso ao local</string>
+    <string name="text_access_difficulty_no_access">Muito difícel de chegar</string>
+    <string name="text_access_difficulty_with_help">Um pouco difícel de chegar</string>
+    <string name="text_access_difficulty_good">Tranquilo de chegar</string>
+
+    <string name="text_dangerousness_no_selection">Periculosidade para o local</string>
+    <string name="text_dangerousness_no_access">Não seguro</string>
+    <string name="text_dangerousness_with_help">Não visite sozinho</string>
+    <string name="text_dangerousness_good">Seguro, tranquilo</string>
+
+    <string name="text_time_walking">Tempo de caminhada, em minutos</string>
 </resources>

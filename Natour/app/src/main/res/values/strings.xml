@@ -39,4 +39,22 @@
     <string name="label_item_home_no_author">Annonimous</string>
     <string name="label_home_button_new">New waterfall</string>
     <string name="label_login_button">Login</string>
+
+
+    <string name="text_wheelchair_difficulty_no_selection">Choose the difficulty for weelchair access</string>
+    <string name="text_wheelchair_difficulty_no_access">No accessible</string>
+    <string name="text_wheelchair_difficulty_with_help">Needs help</string>
+    <string name="text_wheelchair_difficulty_good">Accessible</string>
+
+    <string name="text_access_difficulty_no_selection">Choose the difficulty for access</string>
+    <string name="text_access_difficulty_no_access">Very difficulty to get in</string>
+    <string name="text_access_difficulty_with_help">A little bit hard to get in</string>
+    <string name="text_access_difficulty_good">Easy to get in</string>
+
+    <string name="text_dangerousness_no_selection">Choose the dangerousness level for the place</string>
+    <string name="text_dangerousness_no_access">Not safe</string>
+    <string name="text_dangerousness_with_help">Not visit alone</string>
+    <string name="text_dangerousness_good">It is a good place</string>
+
+    <string name="text_time_walking">Average walking, in minutes</string>
 </resources>

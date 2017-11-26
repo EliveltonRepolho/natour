@@ -5,12 +5,16 @@ import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.databinding.ObservableField;
+import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Location;
 import android.support.annotation.Nullable;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
-import com.repolho.natour.BR;
 import com.repolho.natour.BaseViewModel;
+import com.repolho.natour.R;
 import com.repolho.natour.camera2.APictureCapturingService;
 import com.repolho.natour.camera2.AutoFitTextureView;
 import com.repolho.natour.camera2.PictureCapturingListener;
@@ -36,7 +40,20 @@ public class NewPointViewModel extends BaseViewModel
 
     public final ObservableField<String> title = new ObservableField<>();
     public final ObservableField<String> coordenatesDesc = new ObservableField<>();
-    public final ObservableField<String> detail = new ObservableField<>();
+
+    public final ObservableField<Integer> accessDifficulty = new ObservableField<>();
+    public final ObservableField<String> accessDifficultyText = new ObservableField<>();
+    public final ObservableField<Drawable> accessDifficultyRes = new ObservableField<>();
+
+    public final ObservableField<Integer> wheelchairDifficulty = new ObservableField<>();
+    public final ObservableField<String> wheelchairDifficultyText = new ObservableField<>();
+    public final ObservableField<Drawable> wheelchairDifficultyRes = new ObservableField<>();
+
+    public final ObservableField<Integer> dangerousness = new ObservableField<>();
+    public final ObservableField<String> dangerousnessText = new ObservableField<>();
+    public final ObservableField<Drawable> dangerousnessRes = new ObservableField<>();
+
+    public final ObservableField<String> walkingAverage = new ObservableField<>();
 
     public final ObservableField<String> snackbarText = new ObservableField<>();
 
@@ -50,6 +67,14 @@ public class NewPointViewModel extends BaseViewModel
         mPictureService = PictureCapturingServiceImpl.getInstance(activity);
         mNewPointTaskService = NewPointTaskServiceImpl.getInstance(context);
         locationHelper = new LocationHelper(activity);
+
+        //Defaults
+        wheelchairDifficultyRes.set(null);
+        wheelchairDifficultyText.set(getContext().getString(R.string.text_wheelchair_difficulty_no_selection));
+        accessDifficultyRes.set(null);
+        accessDifficultyText.set(getContext().getString(R.string.text_access_difficulty_no_selection));
+        dangerousnessRes.set(null);
+        dangerousnessText.set(getContext().getString(R.string.text_dangerousness_no_selection));
     }
 
     void setNavigator(NewPointNavigator navigator) {
@@ -91,8 +116,8 @@ public class NewPointViewModel extends BaseViewModel
      */
     @Override
     public void onCaptureDone(byte[] pictureData) {
-        Detail detailObj = new Detail(detail.get());
-        Point point = new Point(title.get(), locationHelper.getLastLocation().getLatitude(), locationHelper.getLastLocation().getLongitude() , getLocation(), detailObj);
+        Detail detail = new Detail(dangerousness.get(), walkingAverage.get(), accessDifficulty.get(), wheelchairDifficulty.get());
+        Point point = new Point(title.get(), locationHelper.getLastLocation().getLatitude(), locationHelper.getLastLocation().getLongitude() , getLocation(), detail);
         mNewPointTaskService.uploadImage(pictureData, title.get(), point, this);
     }
 
@@ -125,4 +150,70 @@ public class NewPointViewModel extends BaseViewModel
         return fullAddress;
     }
 
+    public void onWeelchairInfoChanged(SeekBar seekBar, int pos, boolean fromUser) {
+        wheelchairDifficulty.set(pos);
+        switch (pos){
+            case 0:
+                wheelchairDifficultyRes.set(null);
+                wheelchairDifficultyText.set(getContext().getString(R.string.text_wheelchair_difficulty_no_selection));
+                break;
+            case 1:
+                wheelchairDifficultyRes.set(getContext().getDrawable(R.drawable.ic_not_interested_black_24dp));
+                wheelchairDifficultyText.set(getContext().getString(R.string.text_wheelchair_difficulty_no_access));
+                break;
+            case 2:
+                wheelchairDifficultyRes.set(getContext().getDrawable(R.drawable.ic_directions_walk_black_24dp));
+                wheelchairDifficultyText.set(getContext().getString(R.string.text_wheelchair_difficulty_with_help));
+                break;
+            case 3:
+                wheelchairDifficultyRes.set(getContext().getDrawable(R.drawable.ic_accessible_black_24dp));
+                wheelchairDifficultyText.set(getContext().getString(R.string.text_wheelchair_difficulty_good));
+                break;
+        }
+    }
+
+    public void onAccessDifficultyInfoChanged(SeekBar seekBar, int pos, boolean fromUser) {
+        accessDifficulty.set(pos);
+        switch (pos){
+            case 0:
+                accessDifficultyRes.set(null);
+                accessDifficultyText.set(getContext().getString(R.string.text_access_difficulty_no_selection));
+                break;
+            case 1:
+                accessDifficultyRes.set(getContext().getDrawable(R.drawable.ic_priority_high_black_24dp));
+                accessDifficultyText.set(getContext().getString(R.string.text_access_difficulty_no_access));
+                break;
+            case 2:
+                accessDifficultyRes.set(getContext().getDrawable(R.drawable.ic_favorite_border_black_24dp));
+                accessDifficultyText.set(getContext().getString(R.string.text_access_difficulty_with_help));
+                break;
+            case 3:
+                accessDifficultyRes.set(getContext().getDrawable(R.drawable.ic_favorite_black_24dp));
+                accessDifficultyText.set(getContext().getString(R.string.text_access_difficulty_good));
+                break;
+        }
+    }
+
+    public void onDangerousnessInfoChanged(SeekBar seekBar, int pos, boolean fromUser) {
+        dangerousness.set(pos);
+        switch (pos){
+            case 0:
+                dangerousnessRes.set(null);
+                dangerousnessText.set(getContext().getString(R.string.text_dangerousness_no_selection));
+                break;
+            case 1:
+                dangerousnessRes.set(getContext().getDrawable(R.drawable.ic_report_problem_black_24dp));
+                dangerousnessText.set(getContext().getString(R.string.text_dangerousness_no_access));
+                break;
+            case 2:
+                dangerousnessRes.set(getContext().getDrawable(R.drawable.ic_group_work_black_24dp));
+                dangerousnessText.set(getContext().getString(R.string.text_dangerousness_with_help));
+                break;
+            case 3:
+                dangerousnessRes.set(getContext().getDrawable(R.drawable.ic_thumb_up_black_24dp));
+                dangerousnessText.set(getContext().getString(R.string.text_dangerousness_good));
+                break;
+        }
+
+    }
 }
