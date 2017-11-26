@@ -42,4 +42,10 @@ public class UserViewModel extends BaseViewModel {
             mNavigator.onLogout();
         }
     }
+
+    public void restartIntroClicked() {
+        if (mNavigator != null) {
+            mNavigator.onRestartIntro();
+        }
+    }
 }

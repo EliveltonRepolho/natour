@@ -22,7 +22,7 @@ import com.google.firebase.crash.FirebaseCrash;
 import com.repolho.natour.BaseActivity;
 import com.repolho.natour.R;
 import com.repolho.natour.ViewModelHolder;
-import com.repolho.natour.home.HomeActivity;
+import com.repolho.natour.intro.IntroActivity;
 import com.repolho.natour.util.ActivityUtils;
 
 public class LoginActivity extends BaseActivity implements LoginNavigator, GoogleApiClient.OnConnectionFailedListener {
@@ -136,7 +136,7 @@ public class LoginActivity extends BaseActivity implements LoginNavigator, Googl
         if (result != null) {
             Log.d(TAG, "handleFirebaseAuthResult:SUCCESS");
 
-            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+            startActivity(new Intent(LoginActivity.this, IntroActivity.class));
             finish();
         } else {
             Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show();

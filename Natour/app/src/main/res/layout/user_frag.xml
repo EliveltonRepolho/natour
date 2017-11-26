@@ -43,8 +43,9 @@
             android:layout_marginRight="14dp"
             android:background="@color/grey_800" />
 
+
         <Button
-            android:id="@+id/btn_logout"
+            android:id="@+id/btn_restart_intro"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,12 +55,37 @@
             android:background="@android:color/transparent"
             android:gravity="left|center_vertical"
             android:paddingStart="10dp"
-            android:text="Sair / Logout"
+            android:text="@string/label_intro_button"
+            android:textStyle="bold"
+            android:onClick="@{() -> viewmodel.restartIntroClicked()}"/>
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_above="@+id/btn_logout"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/grey_300" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/v_line2"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:background="@android:color/transparent"
+            android:gravity="left|center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/label_logout_button"
             android:textStyle="bold"
             android:onClick="@{() -> viewmodel.logoutClicked()}"/>
 
         <View
-            android:id="@+id/v_line1"
+            android:id="@+id/v_line2"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_alignParentBottom="true"

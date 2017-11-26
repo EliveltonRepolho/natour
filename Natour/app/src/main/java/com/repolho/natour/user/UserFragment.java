@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.repolho.natour.R;
 import com.repolho.natour.ViewModelHolder;
 import com.repolho.natour.databinding.UserFragBinding;
+import com.repolho.natour.intro.IntroActivity;
 import com.repolho.natour.login.LoginActivity;
 import com.repolho.natour.util.ActivityUtils;
 
@@ -103,5 +104,10 @@ public class UserFragment extends Fragment implements UserNavigator {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(mViewModel.getContext(), LoginActivity.class));
         getActivity().finish();
+    }
+
+    @Override
+    public void onRestartIntro() {
+        startActivity(new Intent(mViewModel.getContext(), IntroActivity.class));
     }
 }

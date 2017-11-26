@@ -7,4 +7,6 @@ public interface UserNavigator {
 
     void onLogout();
 
+    void onRestartIntro();
+
 }

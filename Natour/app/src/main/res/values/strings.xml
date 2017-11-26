@@ -12,6 +12,10 @@
     <string name="no_points_all">No poits added</string>
     <string name="no_points_add">Be the first</string>
 
+    <!-- User -->
+    <string name="label_logout_button">Logout</string>
+    <string name="label_intro_button">Welcome page</string>
+
     <string name="error_upload_task_create">Couldn\'t create upload task.</string>
     <string name="default_progress_message">Please wait...</string>
     <string name="profile_progress_message">Signing in...</string>
