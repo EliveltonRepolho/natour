@@ -112,7 +112,6 @@ public class NewPointViewModel extends BaseViewModel
         }
     }
 
-
     public void startLocationApi(){
         locationHelper.buildGoogleApiClient();
         getLocation();

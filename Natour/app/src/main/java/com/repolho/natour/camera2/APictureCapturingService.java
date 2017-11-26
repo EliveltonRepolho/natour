@@ -45,7 +45,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * Abstract Picture Taking Service.
  *
- * @author hzitoun (zitoun.hamed@gmail.com)
  */
 public abstract class APictureCapturingService {
 

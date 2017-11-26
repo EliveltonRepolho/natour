@@ -1,28 +1,17 @@
 package com.repolho.natour.firebase.points;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
-import android.media.ImageReader;
-import android.os.Build;
 
-import com.repolho.natour.camera2.APictureCapturingService;
-import com.repolho.natour.camera2.PictureCapturingListener;
 import com.repolho.natour.model.Point;
-
-import java.nio.ByteBuffer;
 
 
 /**
  * The aim of this service is to secretly take pictures (without preview or opening device's camera app)
  * from all available cameras using Android Camera 2 API
  *
- * @author hzitoun (zitoun.hamed@gmail.com)
  */
-
 public class NewPointTaskServiceImpl extends NewPointTaskService {
 
     private static final String TAG = "NewPointTaskServiceImpl";

@@ -69,7 +69,6 @@ public class NewPointActivity extends BaseActivity implements NewPointNavigator,
         // Building the GoogleApi client
         mViewModel.startLocationApi();
         mViewDataBinding.btnEnableEditDescCoordenate.setOnClickListener(v -> setupAddress());
-        setupAddress();
     }
 
     private void setupAddress() {
@@ -134,6 +133,12 @@ public class NewPointActivity extends BaseActivity implements NewPointNavigator,
                     NEW_POINT_VIEWMODEL_TAG);
             return viewModel;
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setupAddress();
     }
 
     @Override

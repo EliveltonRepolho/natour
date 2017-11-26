@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by Jaison
+ * Helper class responsable for getting location infos and manipulate the API Services
+ *
  */
-
 public class LocationHelper {
     private Activity current_activity;
     private Location mLastLocation;
@@ -32,9 +32,8 @@ public class LocationHelper {
     }
 
     /**
-     * Method to display the location on UI
+     * Method to get the location object
      */
-
     public Location getLocation() {
         if (ContextCompat.checkSelfPermission(current_activity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ContextCompat.checkSelfPermission(current_activity, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -54,6 +53,7 @@ public class LocationHelper {
         return mLastLocation;
 
     }
+
     public Address getAddress(Location location) {
         if(location == null)
             return null;
@@ -119,8 +119,7 @@ public class LocationHelper {
 
             }
 
-        } else
-            return "Something went wrong";
+        }
 
         return null;
     }
