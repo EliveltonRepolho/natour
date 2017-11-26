@@ -153,7 +153,7 @@ public class NewPointActivity extends BaseActivity implements NewPointNavigator,
             case android.R.id.home:
                 finish();
                 return true;
-            case R.id.menu_new_catch_done:
+            case R.id.menu_new_point_done:
                 mViewModel.addNewPoint();
                 return true;
             default:

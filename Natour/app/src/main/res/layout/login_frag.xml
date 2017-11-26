@@ -53,7 +53,7 @@
             <ImageView
                 style="@style/ThemeOverlay.FishIcon"
                 android:id="@+id/fish_icon"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/ic_waterfall_foreground"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

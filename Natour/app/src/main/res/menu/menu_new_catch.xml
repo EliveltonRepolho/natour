@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menu_new_catch_done"
+    <item android:id="@+id/menu_new_point_done"
         android:icon="@drawable/ic_done_black"
-        android:title="Done"
+        android:title="@string/label_new_point_done"
         app:showAsAction="always"/>
 
 </menu>

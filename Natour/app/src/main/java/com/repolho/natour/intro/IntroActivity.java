@@ -17,7 +17,7 @@ import com.repolho.natour.home.HomeActivity;
  * Created by andrew on 11/17/16.
  */
 
-public class IntroActivity extends AppIntro {
+public class IntroActivity extends AppIntro{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
