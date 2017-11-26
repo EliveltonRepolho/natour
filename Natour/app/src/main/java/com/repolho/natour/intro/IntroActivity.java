@@ -24,32 +24,35 @@ public class IntroActivity extends AppIntro{
         super.onCreate(savedInstanceState);
 
         SliderPage sliderPage1 = new SliderPage();
-        sliderPage1.setTitle("Welcome!");
-        sliderPage1.setDescription("This is a demo of the AppIntro library.");
-        sliderPage1.setImageDrawable(R.drawable.ic_account_circle_black);
-        sliderPage1.setBgColor(Color.TRANSPARENT);
+        sliderPage1.setTitle(getString(R.string.intro_1_title));
+        sliderPage1.setDescription(getString(R.string.intro_1_text));
+        sliderPage1.setImageDrawable(R.mipmap.ic_waterfall_foreground_custom);
+        sliderPage1.setBgColor(getColor(R.color.bg_intro_1));
         addSlide(AppIntroFragment.newInstance(sliderPage1));
 
         SliderPage sliderPage2 = new SliderPage();
-        sliderPage2.setTitle("Clean App Intros");
-        sliderPage2.setDescription("This library offers developers the ability to add clean app intros at the start of their apps.");
-        sliderPage2.setImageDrawable(R.drawable.ic_account_circle_black);
-        sliderPage2.setBgColor(Color.TRANSPARENT);
+        sliderPage2.setTitle(getString(R.string.intro_2_title));
+        sliderPage2.setDescription(getString(R.string.intro_2_text));
+        sliderPage2.setImageDrawable(R.drawable.ic_accessibility_black_custom);
+        sliderPage2.setBgColor(getColor(R.color.bg_intro_2));
         addSlide(AppIntroFragment.newInstance(sliderPage2));
 
         SliderPage sliderPage3 = new SliderPage();
-        sliderPage3.setTitle("Simple, yet Customizable");
-        sliderPage3.setDescription("The library offers a lot of customization, while keeping it simple for those that like simple.");
-        sliderPage3.setImageDrawable(R.drawable.ic_account_circle_black);
-        sliderPage3.setBgColor(Color.TRANSPARENT);
+        sliderPage3.setTitle(getString(R.string.intro_3_title));
+        sliderPage3.setDescription(getString(R.string.intro_3_text));
+        sliderPage3.setImageDrawable(R.drawable.ic_accessible_black_custom);
+        sliderPage3.setBgColor(getColor(R.color.bg_intro_3));
         addSlide(AppIntroFragment.newInstance(sliderPage3));
 
         SliderPage sliderPage4 = new SliderPage();
-        sliderPage4.setTitle("Explore");
-        sliderPage4.setDescription("Feel free to explore the rest of the library demo!");
-        sliderPage4.setImageDrawable(R.drawable.ic_account_circle_black);
-        sliderPage4.setBgColor(Color.TRANSPARENT);
+        sliderPage4.setTitle(getString(R.string.intro_4_title));
+        sliderPage4.setDescription(getString(R.string.intro_4_text));
+        sliderPage4.setImageDrawable(R.drawable.ic_new_black_custom);
+        sliderPage4.setBgColor(getColor(R.color.bg_intro_4));
         addSlide(AppIntroFragment.newInstance(sliderPage4));
+
+        setSkipText(getString(R.string.intro_skip_text));
+        setDoneText(getString(R.string.intro_done_text));
     }
 
     @Override

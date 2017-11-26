@@ -24,4 +24,19 @@
     <string name="error_user_not_signed_in">Error user not signed in.</string>
     <string name="title_hint">Dê um nome para este local</string>
     <string name="label_new_point_done">Done</string>
+
+    <!-- Intro -->
+    <string name="intro_1_title">Welcome to Na.Tour</string>
+    <string name="intro_1_text">This app is for Waterfalls lovers and want to know new places or even sharing those you with the community</string>
+    <string name="intro_2_title">Sharing !</string>
+    <string name="intro_2_text">You can share a new location of a Waterfall you know... or visite a new that you found here</string>
+    <string name="intro_3_title">Colaborating</string>
+    <string name="intro_3_text">You can easily colaborate with good informations... Like the facility for a special person to get there !</string>
+    <string name="intro_4_title">Have fun !</string>
+    <string name="intro_4_text">Let\'s get it in ! Finish this welcome page and click in the icon showed above to add a new Waterfall</string>
+    <string name="intro_skip_text">SKIP</string>
+    <string name="intro_done_text">DONE</string>
+    <string name="label_item_home_no_author">Annonimous</string>
+    <string name="label_home_button_new">New waterfall</string>
+    <string name="label_login_button">Login</string>
 </resources>

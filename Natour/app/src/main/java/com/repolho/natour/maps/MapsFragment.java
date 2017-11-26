@@ -1,5 +1,6 @@
 package com.repolho.natour.maps;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,9 +16,11 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.repolho.natour.R;
 import com.repolho.natour.ViewModelHolder;
 import com.repolho.natour.databinding.MapsFragBinding;
+import com.repolho.natour.home.HomeNavigator;
+import com.repolho.natour.newpoint.NewPointActivity;
 import com.repolho.natour.util.ActivityUtils;
 
-public class MapsFragment extends Fragment implements OnMapReadyCallback {
+public class MapsFragment extends Fragment implements OnMapReadyCallback, MapsNavigator {
     public static final String TAG = "MapsFragment";
     public static final String MAPS_VIEWMODEL_TAG = "MAPS_VIEWMODEL_TAG";
 
@@ -32,7 +35,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment ThirdFragment.
+     * @return A new instance of fragment MapsFragment.
      */
     public static MapsFragment newInstance() {
         return new MapsFragment();
@@ -42,6 +45,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mViewModel = findOrCreateViewModel();
+        mViewModel.setNavigator(this);
+        mViewModel.startLocationApi();
     }
 
     @NonNull
@@ -57,7 +62,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
             return retainedViewModel.getViewmodel();
         } else {
             // There is no ViewModel yet, create it.
-            MapsViewModel viewModel = new MapsViewModel(getActivity().getApplicationContext());
+            MapsViewModel viewModel = new MapsViewModel(getActivity().getApplicationContext(), getActivity());
 
             // and bind it to this Activity's lifecycle using the Fragment Manager.
             ActivityUtils.addFragmentToActivity(
@@ -83,6 +88,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        mViewModel.updateMapUIZoom();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mViewModel.updateMapUIZoom();
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         mViewModel.onActivityDestroyed();
@@ -94,5 +111,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
     }
 
 
-
+    @Override
+    public void addNewPoint() {
+        startActivity(new Intent(getContext(), NewPointActivity.class));
+    }
 }

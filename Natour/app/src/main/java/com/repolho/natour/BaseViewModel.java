@@ -2,6 +2,7 @@ package com.repolho.natour;
 
 import android.content.Context;
 import android.databinding.BaseObservable;
+import android.databinding.ObservableBoolean;
 
 
 /**
@@ -10,6 +11,7 @@ import android.databinding.BaseObservable;
 public abstract class BaseViewModel extends BaseObservable {
 
     private final Context mContext;
+    public final ObservableBoolean isFirst = new ObservableBoolean( true);
 
     public BaseViewModel(Context context) {
         mContext = context.getApplicationContext(); // Force use of Application Context.

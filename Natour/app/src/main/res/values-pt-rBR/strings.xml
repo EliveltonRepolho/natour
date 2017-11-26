@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="camera_error">Seu aparelho não suporta a API Camera2.</string>
+
+    <string name="no_points_all">Nenhum cachoeira localizada ainda</string>
+    <string name="no_points_add">Seja o primeiro. Adicione uma !</string>
+
+    <!-- User -->
+    <string name="label_logout_button">Sair</string>
+    <string name="label_intro_button">Introdução</string>
+
+    <string name="error_upload_task_create">Erro ao crar a tarefa de upload.</string>
+    <string name="default_progress_message">Por favor aguarde...</string>
+    <string name="profile_progress_message">Entrando com suas credencias...</string>
+    <string name="user_logged_out_error">Você deve estar logado.</string>
+    <string name="error_user_not_signed_in">Erro fazer login com sua conta.</string>
+    <string name="title_hint">Dê um nome para este local</string>
+    <string name="label_new_point_done">Pronto</string>
+
+    <!-- Intro -->
+    <string name="intro_1_title">Bem-vindo ao app Na.Tour</string>
+    <string name="intro_1_text">Esse app é para amantes de Cachoeiras e procuram conhecer novos lugares ou então compartilhar os seus já conhecidos</string>
+    <string name="intro_2_title">Compartilhe !</string>
+    <string name="intro_2_text">Você pode compartilhar os lugares que você conhece que contém cachoeiras, adicionando fotos e informaçõe úteis. Ou ainda procurar por novos lugares para conhecer !</string>
+    <string name="intro_3_title">Colabore !</string>
+    <string name="intro_3_text">Colabore com informaçõe úteis para pessoas com deficiencia motora possa desfrutar destes belos lugares com segurança e sem imprevistos.</string>
+    <string name="intro_4_title">Divirta-se !</string>
+    <string name="intro_4_text">Partiu ! Finalize esta introdução e poderá desfrutar do app. Para adicionar novas cocheiras, não se esqueça, um ícone igual esse da tela, estará sempre visível</string>
+    <string name="intro_skip_text">PULAR</string>
+    <string name="intro_done_text">FINALIZAR</string>
+    <string name="label_item_home_no_author">Anônimo</string>
+    <string name="label_home_button_new">Nova cachoeira</string>
+    <string name="label_login_button">Login</string>
+</resources>

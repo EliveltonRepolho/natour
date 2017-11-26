@@ -16,8 +16,6 @@ import com.repolho.natour.BaseViewModel;
  */
 public class HomeViewModel extends BaseViewModel {
 
-    public final ObservableBoolean isFirst = new ObservableBoolean( true);
-
     private HomeNavigator mNavigator;
 
     public HomeViewModel(Context context) {

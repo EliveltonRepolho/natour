@@ -67,7 +67,7 @@ public class NewPointActivity extends BaseActivity implements NewPointNavigator,
         checkPermissions();
 
         // Building the GoogleApi client
-        mViewModel.startLocationApi();
+            mViewModel.startLocationApi();
         mViewDataBinding.btnEnableEditDescCoordenate.setOnClickListener(v -> setupAddress());
     }
 

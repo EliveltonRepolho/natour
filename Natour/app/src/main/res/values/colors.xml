@@ -45,5 +45,12 @@
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
 
+    <color name="bg_intro_1">#ff0f9d58</color>
+    <color name="bg_intro_2">#20d2bb</color>
+    <color name="bg_intro_3">#3395ff</color>
+    <color name="bg_intro_4">#c873f4</color>
+    <color name="bg_intro_5">#f64c73</color>
+
+
     <drawable name="touchFeedback">#CFD8DC</drawable>
 </resources>
