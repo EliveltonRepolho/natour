@@ -2,6 +2,7 @@ package com.repolho.natour.user;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -110,4 +111,13 @@ public class UserFragment extends Fragment implements UserNavigator {
     public void onRestartIntro() {
         startActivity(new Intent(mViewModel.getContext(), IntroActivity.class));
     }
+
+    @Override
+    public void answerOnlineForm(String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+
 }

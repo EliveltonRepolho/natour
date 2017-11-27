@@ -87,6 +87,10 @@ public class FirebaseManager {
         return getBaseRef().child("point");
     }
 
+    public static DatabaseReference getWebPageResponsesRef() {
+        return getBaseRef().child("webforms");
+    }
+
     public static String getPointsPath() {
         return "point/";
     }

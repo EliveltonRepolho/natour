@@ -15,6 +15,7 @@
     <!-- User -->
     <string name="label_logout_button">Logout</string>
     <string name="label_intro_button">Welcome page</string>
+    <string name="label_responses_button">Answer tester questions</string>
 
     <string name="error_upload_task_create">Couldn\'t create upload task.</string>
     <string name="default_progress_message">Please wait...</string>

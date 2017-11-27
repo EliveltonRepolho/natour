@@ -8,6 +8,7 @@
     <!-- User -->
     <string name="label_logout_button">Sair</string>
     <string name="label_intro_button">Introdução</string>
+    <string name="label_responses_button">Responder o questionário online</string>
 
     <string name="error_upload_task_create">Erro ao crar a tarefa de upload.</string>
     <string name="default_progress_message">Por favor aguarde...</string>

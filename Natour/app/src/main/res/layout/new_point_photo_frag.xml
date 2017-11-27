@@ -4,11 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewmodel"
             type="com.repolho.natour.newpoint.NewPointViewModel" />
-
     </data>
 
     <LinearLayout
